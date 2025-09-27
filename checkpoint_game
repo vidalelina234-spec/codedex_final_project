@@ -1,0 +1,26 @@
+import random
+
+print("Welcome to the Terminal Adventure Game!")
+print("You wak up in a mysterious forest...")
+
+choice1 = input("Do you want to go left into the dark woods or right towards the river? (left/right):")
+
+if choice1 == "left":
+    print("You walk into the woods and hear growling...")
+    if random.randint(1, 2) == 1:
+        print("A friendly wold guided you safely out. You survive!")
+    else:
+        print("A hungry wolf chases you down. Game over")
+elif choice1 == "right":
+    print("You follow the river and find a small boat.")
+    choice2 = input("Do you sail downstram or stay by the shore? (sail/stay):")
+    if choice2 == "sail":
+        if random.randint(1, 2) == 1:
+            print("The river leads you to a village. You are saved!")
+        else:
+            print("The boat tips over...You swept away. Game over.")
+    else:
+        print("You wait too long and run out of food. Game over.")
+else: 
+    print("You stand still until night falls...Game over.   ")
+  
